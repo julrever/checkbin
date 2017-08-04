@@ -1,0 +1,28 @@
+= form_tag index_page_index_path, :method => "get", id: "search-form", :class => "center" do
+  = text_field_tag :search, params[:search], placeholder: "Search Bin, Country or Brand", :id => "searchfield"
+  = submit_tag "Search", :name => nil, :id => "searchbtn"
+
+- if @bins.blank?
+  .no-results= "There are no bins containing the \"#{params[:search]}\"."
+- else
+  .opac= page_entries_info @bins
+  %table.table-fill
+    %thead
+      %tr
+        %th BIN/IIN
+        %th.wide Brand
+        %th Country
+        %th.wide Bank
+    %tbody.table-hover
+      - @bins.each do |b|
+        %tr
+          %td= link_to b.bin, "/#{b.bin}"
+          %td= b.brand
+          %td= b.country
+          %td= b.bank
+
+  .paginate= will_paginate @bins
+
+.home-btn=link_to "HOME", '/'
+.countries-btn=link_to "COUNTRIES", '/countries'
+.brands-btn=link_to "BRANDS", '/brands'

@@ -1,0 +1,35 @@
+%table.table-fill#bin
+  %thead
+    %tr
+      %th BIN/IIN
+      %th= @current.bin
+  %tbody.table-hover
+    %tr
+      %td Brand
+      %td= @current.brand
+    %tr
+      %td Type
+      %td= @current.typecard
+    %tr
+      %td Category
+      %td= @current.category
+    %tr
+      %td Bank
+      %td= @current.bank
+    %tr
+      %td Bank URL
+      %td= @current.bankurl
+    %tr
+      %td Country
+      %td= @current.country
+    %tr
+      %td Country Short
+      %td= @current.cshort
+    %tr
+      %td Latitude
+      %td= @current.latitude
+    %tr
+      %td Longitude
+      %td= @current.longitude
+
+#home-link= link_to "HOME", "/"
