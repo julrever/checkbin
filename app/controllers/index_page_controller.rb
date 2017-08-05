@@ -3,7 +3,7 @@ class IndexPageController < ApplicationController
     if params[:search]
       @bins = Bin.search(params[:search]).order("bin ASC").paginate(:page => params[:page], :per_page => 100)
     else
-      @bins = Bin.all.order("bin ASC").paginate(:page => params[:page], :per_page => 100)
+      @bins = Bin.all.order("bin ASC").paginate(:page => params[:page], :per_page => 150)
     end
   end
 

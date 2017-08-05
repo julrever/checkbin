@@ -6,7 +6,7 @@
   %tbody.table-hover
     %tr
       %td Brand
-      %td= @current.brand
+      %td= link_to @current.brand, "/?utf8=✓&search=#{@current.brand}"
     %tr
       %td Type
       %td= @current.typecard
@@ -21,7 +21,7 @@
       %td= @current.bankurl
     %tr
       %td Country
-      %td= @current.country
+      %td= link_to @current.country, "/?utf8=✓&search=#{@current.country}"
     %tr
       %td Country Short
       %td= @current.cshort

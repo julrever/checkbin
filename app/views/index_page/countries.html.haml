@@ -3,7 +3,7 @@
     - @countries.each_slice(4) do |row|
       %tr
       - row.each do |c|
-        %td.text-left= link_to c.country, "/?utf8=✓&search=#{c.country}"
+        %td.center= link_to c.country, "/?utf8=✓&search=#{c.country}"
 
 .home-btn=link_to "HOME", '/'
 .countries-btn=link_to "COUNTRIES", '/countries'

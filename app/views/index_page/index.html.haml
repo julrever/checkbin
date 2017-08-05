@@ -3,7 +3,7 @@
   = submit_tag "Search", :name => nil, :id => "searchbtn"
 
 - if @bins.blank?
-  .no-results= "There are no bins containing the \"#{params[:search]}\"."
+  .no-results= "There are no results for \"#{params[:search]}\"."
 - else
   .opac= page_entries_info @bins
   %table.table-fill
@@ -22,6 +22,7 @@
           %td= b.bank
 
   .paginate= will_paginate @bins
+
 
 .home-btn=link_to "HOME", '/'
 .countries-btn=link_to "COUNTRIES", '/countries'

@@ -3,7 +3,7 @@
     - @brands.each_slice(4) do |row|
       %tr
       - row.each do |b|
-        %td.text-left= link_to b.brand, "/?utf8=✓&search=#{b.brand}"
+        %td.center= link_to b.brand, "/?utf8=✓&search=#{b.brand}"
 
 .home-btn=link_to "HOME", '/'
 .countries-btn=link_to "COUNTRIES", '/countries'

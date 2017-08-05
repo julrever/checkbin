@@ -20,9 +20,11 @@ div.table-title {
     max-width: 600px;
     margin-top: 5%;
 }
+
 #search{
     margin: 30px auto;
 }
+
 .table-fill {
     background: white;
     border-radius:3px;
@@ -236,10 +238,18 @@ a:hover{
 }
 
 #search a:hover{
-    font-weight: 400;
+    font-weight: 300;
 }
 
-/*************** HOME LINK ****************/
+#bin a,#bin a:visited{
+    transition:0.5s color ease;
+    color: #6e99b4;
+}
+
+#bin a:hover{
+    font-weight: 300;
+    color: #88bedf;
+}
 
 #home-link a{
     display: block;
@@ -264,7 +274,6 @@ a:hover{
     transition: 0.5s all ease;
 }
 
-/*************** NO RESULTS WARNING ****************/
 
 .no-results{
     margin-top: 15px;
@@ -273,8 +282,6 @@ a:hover{
     font-size:18px;
     text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
-
-
 
 .countries-btn a, .brands-btn a, .home-btn a{
     position: fixed;
@@ -296,13 +303,12 @@ a:hover{
     opacity: 0.60;
 }
 
-
 .countries-btn a:hover, .brands-btn a:hover, .home-btn a:hover {
     opacity: 0.95;
     transition:0.5s opacity ease;
 }
 
-.countries-btn a, .brands-btn a {
+.countries-btn a {
     bottom: 60px;
 }
 
